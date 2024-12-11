@@ -12,61 +12,74 @@
         font-family: Arial, sans-serif;
         background: url("https://images.pexels.com/photos/1162643/pexels-photo-1162643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
           no-repeat center center fixed;
-        background-size: cover; /* Ensures the image covers the entire background */
-        color: black; /* White text for readability */
+        background-size: cover;
+        color: black;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh; /* Full-screen height */
+        height: 100vh;
+        padding: 10px; /* Adds padding for small screens */
+        box-sizing: border-box;
       }
 
       .main-content {
         text-align: center;
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.8
-        ); /* Semi-transparent white background */
+        background-color: rgba(255, 255, 255, 0.8);
         padding: 30px 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        max-width: 500px;
+        width: 100%;
       }
 
       .main-content img {
-        max-width: 500px; /* Limit logo size */
-        margin-bottom: 5px; /* Add space below the logo */
+        max-width: 100%; /* Ensures the logo scales properly */
+        margin-bottom: 5px;
       }
 
       .main-content h2 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Adjusted for smaller screens */
         margin-bottom: 20px;
       }
 
       .main-content p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-      }
-
-      .notify-btn {
-        background-color: #ffc107; /* Yellow button */
-        color: black; /* Dark text on yellow */
-        padding: 15px 30px;
-        border: none;
-        border-radius: 5px;
         font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .notify-btn:hover {
-        background-color: #e0a800; /* Slightly darker yellow on hover */
+        margin-bottom: 20px;
       }
 
       .footer {
         margin-top: 20px;
         font-size: 0.9rem;
         color: black;
+      }
+
+      /* Media Queries for Smaller Screens */
+      @media (max-width: 768px) {
+        .main-content {
+          padding: 20px 15px;
+        }
+
+        .main-content h2 {
+          font-size: 1.8rem; /* Slightly smaller heading */
+        }
+
+        .main-content p {
+          font-size: 0.9rem; /* Smaller text */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .main-content {
+          padding: 15px 10px;
+        }
+
+        .main-content h2 {
+          font-size: 1.5rem; /* Smaller heading for very small screens */
+        }
+
+        .main-content p {
+          font-size: 0.8rem; /* Smaller text for small screens */
+        }
       }
     </style>
   </head>
@@ -78,7 +91,6 @@
       />
       <h2>Something Exciting is Coming Soon!</h2>
       <p>We are working hard to launch our new platform. Stay tuned!</p>
-      <!-- <button class="notify-btn">Notify Me</button> -->
       <footer class="footer">
         <p>© 2024 Sanifect LMS. All rights reserved.</p>
       </footer>
